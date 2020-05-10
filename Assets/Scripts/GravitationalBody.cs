@@ -11,6 +11,8 @@ public class GravitationalBody : MonoBehaviour {
         float radius = transform.localScale.x;
         float volume = (4 / 3) * Mathf.PI * Mathf.Pow(radius, 3);
         mass = density * volume;
+
+        GetComponent<TrailRenderer>().time = 20;
     }
 
     public void UpdateVelocity(GravitationalBody[] bodies, float timeStep) {
