@@ -7,7 +7,7 @@ public class NBodySimulation : MonoBehaviour {
 
     GravitationalBody[] bodies;
 
-    void Start() {
+    void Awake() {
         bodies = FindObjectsOfType<GravitationalBody>();
         Time.fixedDeltaTime = timeStep;
     }
