@@ -27,7 +27,7 @@ public class GravitationalBody : MonoBehaviour {
             }
         }
 
-        trailRenderer.time = velocity.sqrMagnitude / 50f;
+        trailRenderer.time = velocity.sqrMagnitude / (2f * mass);
     }
 
     public void UpdatePosition(float timeStep) {
