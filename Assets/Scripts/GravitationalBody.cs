@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class GravitationalBody : MonoBehaviour {
     public Vector3 velocity;
+    public float density;
     public float mass;
-    
-    float radius;
 
     public void Awake() {
-        radius = transform.localScale.x;
+        float radius = transform.localScale.x;
+        float volume = (4 / 3) * Mathf.PI * Mathf.Pow(radius, 3);
+        mass = density * volume;
     }
 
     public void UpdateVelocity(GravitationalBody[] bodies, float timeStep) {
