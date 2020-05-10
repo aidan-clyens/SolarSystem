@@ -5,9 +5,14 @@ using UnityEngine;
 public class GravitationalBody : MonoBehaviour {
     public Vector3 velocity;
     public float mass;
-    public float radius;
+    
+    float radius;
+
+    public void Awake() {
+        radius = transform.localScale.x;
+    }
 
     public void UpdatePosition(float timeStep) {
-        GetComponent<RigidBody>().position += velocity * timeStep;
+        transform.position += velocity * timeStep;
     }
 }
