@@ -265,7 +265,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0.67, y: 123.6, z: -0.04}
+  m_LocalPosition: {x: 0.67, y: 60, z: -0.04}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -384,6 +384,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1028523428}
     m_Modifications:
+    - target: {fileID: 4566374314006819250, guid: 889d4a6e3d50d5e02887591f5e4388b1,
+        type: 3}
+      propertyPath: m_Range
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 4566374314006819250, guid: 889d4a6e3d50d5e02887591f5e4388b1,
+        type: 3}
+      propertyPath: m_Intensity
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4566374314006819250, guid: 889d4a6e3d50d5e02887591f5e4388b1,
+        type: 3}
+      propertyPath: m_BounceIntensity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4566374314006819250, guid: 889d4a6e3d50d5e02887591f5e4388b1,
+        type: 3}
+      propertyPath: m_DrawHalo
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4566374314006819251, guid: 889d4a6e3d50d5e02887591f5e4388b1,
         type: 3}
       propertyPath: m_Parameters.widthCurve.m_Curve.Array.size
@@ -538,6 +558,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Planet
       objectReference: {fileID: 0}
+    - target: {fileID: 5422625992507010232, guid: 880f09da7701aea1996b1439b448ee36,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 74b43aaeab5f919c2aafa7f561af4724, type: 2}
     - target: {fileID: 5422625992507010234, guid: 880f09da7701aea1996b1439b448ee36,
         type: 3}
       propertyPath: m_LocalPosition.x
