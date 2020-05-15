@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerMove : MonoBehaviour {
     public CharacterController controller;
-    public Camera camera;
+    public Transform playerTransform;
     public float speed;
 
     Vector3 velocity;
@@ -18,7 +18,7 @@ public class PlayerMove : MonoBehaviour {
         float z = Input.GetAxis("Vertical");
         float y = Input.GetAxis("Jump");
 
-        Vector3 move = camera.transform.forward * z + camera.transform.right * x + camera.transform.up * y;
+        Vector3 move = playerTransform.forward * z + playerTransform.right * x + playerTransform.up * y;
 
         controller.Move(move * speed * Time.deltaTime);
         controller.Move(velocity * Time.deltaTime);
