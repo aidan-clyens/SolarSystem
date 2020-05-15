@@ -16,8 +16,9 @@ public class PlayerMove : MonoBehaviour {
     void Move() {
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
+        float y = Input.GetAxis("Jump");
 
-        Vector3 move = camera.transform.forward * z + camera.transform.right * x;
+        Vector3 move = camera.transform.forward * z + camera.transform.right * x + camera.transform.up * y;
 
         controller.Move(move * speed * Time.deltaTime);
         controller.Move(velocity * Time.deltaTime);
