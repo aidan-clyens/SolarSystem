@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,14 +7,11 @@ public class GravitationalBody : MonoBehaviour {
     public float density;
     public float mass;
 
-    TrailRenderer trailRenderer;
 
     public void Awake() {
         float radius = transform.localScale.x;
         float volume = (4 / 3) * Mathf.PI * Mathf.Pow(radius, 3);
         mass = density * volume;
-
-        trailRenderer = GetComponent<TrailRenderer>();
     }
 
     public void UpdateVelocity(GravitationalBody[] bodies, float timeStep) {
@@ -26,8 +23,6 @@ public class GravitationalBody : MonoBehaviour {
                 velocity += acceleration * timeStep;
             }
         }
-
-        trailRenderer.time = velocity.sqrMagnitude / (2f * mass);
     }
 
     public void UpdatePosition(float timeStep) {
